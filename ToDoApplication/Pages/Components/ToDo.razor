@@ -1,0 +1,39 @@
+﻿@page "/Todo"
+
+<h3>To Do Application v1.0</h3>
+
+<!--Edit form tag provided by Blazor-->
+<EditForm Model="task" class="form-check-inline" OnValidSubmit="AddTask">
+    <input type="text" @bind-value="task.TaskName" />
+    <button class="btn btn-outline-primary">Add task</button>
+</EditForm>
+
+<ul class="list-group my-2">
+    @foreach(var taskitem in taskList)
+    {
+        if(taskitem.IsCompleted)
+        {
+            <!--Task Completed-->
+            <li class="list-group-item list-group-item-success mx-2" @onclick="(() => taskitem.IsCompleted = !taskitem.IsCompleted)"><del>@taskitem.TaskName</del></li>
+        }
+        else
+        {
+            <!--Task Not Completed-->
+            <li class="list-group-item list-group-item-secondary mx-2" @onclick="(()=> taskitem.IsCompleted =! taskitem.IsCompleted)">@taskitem.TaskName</li>
+        }
+    }
+</ul>
+
+@code {
+    protected List<TaskModel> taskList = new List<TaskModel>();
+
+    protected TaskModel task = new TaskModel();
+
+    private void AddTask()
+    {
+        taskList.Add(task);
+        task = new TaskModel();
+    }
+
+}
+
