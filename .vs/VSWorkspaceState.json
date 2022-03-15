@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ToDoApplication",
+    "\\ToDoApplication\\Pages"
   ],
-  "SelectedNode": "\\C:\\Users\\Fabio_miguel_Silva\\Source\\Repos\\todov1",
+  "SelectedNode": "\\ToDoApplication\\Pages\\ToDo.razor",
   "PreviewInSolutionExplorer": false
 }

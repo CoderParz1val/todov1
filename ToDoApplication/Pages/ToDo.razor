@@ -1,0 +1,52 @@
+﻿@page "/"
+
+<div class="twelve">
+  <h1>To Do Tracker</h1>
+</div>
+
+<!--Edit form tag provided by Blazor-->
+<EditForm Model="task" class="form-check-inline" style="margin-left: 9px" OnValidSubmit="AddTask">
+    <input type="text" class="form-control mb-2" style="width: 300px" @bind-value="task.TaskName" />
+    <InputTextArea class="form-control mb-2" style="width: 300px" @bind-Value="task.TaskNotes"></InputTextArea>
+    <button class="btn btn-outline-primary form-control" style="margin-bottom: 75px">Add task</button>
+</EditForm>
+
+<div class="taskstyle">
+  <h1>Tasks</h1>
+</div>
+<br/>
+
+<ul class="list-group my-2">
+    @foreach(var taskitem in taskList)
+    {
+        if(taskitem.IsCompleted)
+        {
+            <!--Task Completed-->
+            <li class="list-group-item text-wrap list-group-item-success mx-2" @onclick="(() => taskitem.IsCompleted = !taskitem.IsCompleted)"><del>@taskitem.TaskName</del></li>
+
+
+
+        } else
+        {
+            <!--Task Not Completed-->
+            <li class="list-group-item text-wrap list-group-item-secondary mx-2" @onclick="(()=> taskitem.IsCompleted =! taskitem.IsCompleted)">@taskitem.TaskName</li>
+            <p class="list-group-item form-control" id="notesbody" style="word-break: break-all; white-space: normal">@taskitem.TaskNotes</p>
+
+        }
+    }
+</ul>
+
+@code {
+    protected List<TaskModel> taskList = new List<TaskModel>();
+    protected TaskModel task = new TaskModel();
+    private void AddTask()
+    {
+        taskList.Add(task);
+        task = new TaskModel();
+        Console.WriteLine("added");
+    }
+
+
+}
+
+

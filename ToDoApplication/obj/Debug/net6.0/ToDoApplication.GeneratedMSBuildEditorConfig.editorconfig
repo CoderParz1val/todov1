@@ -19,10 +19,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Fabio_miguel_Silva/source/Repos/todov1/ToDoApplication/Pages/Components/ToDo.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xUb0RvLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Fabio_miguel_Silva/source/Repos/todov1/ToDoApplication/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -33,6 +29,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Fabio_miguel_Silva/source/Repos/todov1/ToDoApplication/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fabio_miguel_Silva/source/Repos/todov1/ToDoApplication/Pages/ToDo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9Eby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Fabio_miguel_Silva/source/Repos/todov1/ToDoApplication/Shared/SurveyPrompt.razor]
